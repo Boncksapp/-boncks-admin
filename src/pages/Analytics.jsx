@@ -27,66 +27,113 @@ export const Analytics = () => {
     clickRate: '0%',
     conversions: 0
   })
+  const [industryStats, setIndustryStats] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setStats({
-      sent: '1,248',
-      openRate: '24.5%',
-      clickRate: '8.1%',
-      conversions: '42'
-    })
+    fetchStats()
   }, [])
+
+  const fetchStats = async () => {
+    setLoading(true)
+    try {
+      // Fetch lead counts by industry
+      const { data: leads, error: leadsError } = await supabase
+        .from('leads')
+        .select('industry_name')
+        .neq('business_name', 'Success Verification')
+
+      if (leadsError) throw leadsError
+
+      const industryCounts = leads.reduce((acc, lead) => {
+        const name = lead.industry_name || 'Uncategorized'
+        acc[name] = (acc[name] || 0) + 1
+        return acc
+      }, {})
+
+      const sortedIndustries = Object.entries(industryCounts)
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count)
+
+      setIndustryStats(sortedIndustries)
+
+      // Fetch email logs for global stats
+      const { count: sentCount } = await supabase
+        .from('email_logs')
+        .select('*', { count: 'exact', head: true })
+
+      const { count: openCount } = await supabase
+        .from('email_logs')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'opened')
+
+      const openRate = sentCount > 0 ? ((openCount / sentCount) * 100).toFixed(1) + '%' : '0%'
+
+      setStats({
+        sent: leads.length, // Showing total leads as "Leads Found"
+        openRate: openRate,
+        clickRate: '0%',
+        conversions: 0
+      })
+    } catch (err) {
+      console.error('Error fetching analytics:', err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="p-8">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Dashboard Overview</h1>
-        <p className="text-gray-text mt-1">Real-time performance across all service industries.</p>
+      <header className="mb-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Dashboard Overview</h1>
+          <p className="text-gray-text mt-1">Real-time performance across all service industries.</p>
+        </div>
+        <button 
+          onClick={fetchStats}
+          className="bg-dark text-white border border-white/10 px-4 py-2 rounded-lg font-bold hover:bg-white/5 transition-colors"
+        >
+          Refresh
+        </button>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <StatCard label="Emails Sent Today" value={stats.sent} change="+12%" icon={TrendingUp} />
-        <StatCard label="Average Open Rate" value={stats.openRate} change="+2.3%" icon={Users} />
-        <StatCard label="Click-Through Rate" value={stats.clickRate} change="+0.5%" icon={MousePointer2} />
-        <StatCard label="Trial Signups" value={stats.conversions} change="+15%" icon={Zap} />
+        <StatCard label="Total Leads Found" value={stats.sent} change={loading ? "..." : ""} icon={TrendingUp} />
+        <StatCard label="Average Open Rate" value={stats.openRate} change="0%" icon={Users} />
+        <StatCard label="Click-Through Rate" value={stats.clickRate} change="0%" icon={MousePointer2} />
+        <StatCard label="Trial Signups" value={stats.conversions} change="0%" icon={Zap} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-surface p-6 rounded-xl border border-white/5">
-          <h3 className="text-lg font-bold mb-6 text-white">Industry Performance</h3>
+          <h3 className="text-lg font-bold mb-6 text-white">Leads by Industry</h3>
           <div className="space-y-6">
-            <IndustryProgress name="HVAC" progress={85} rate="12.4%" />
-            <IndustryProgress name="Plumbing" progress={72} rate="10.2%" />
-            <IndustryProgress name="Roofing" progress={68} rate="9.8%" />
-            <IndustryProgress name="Cleaning" progress={55} rate="7.5%" />
-            <IndustryProgress name="Electrical" progress={48} rate="6.1%" />
+            {industryStats.length === 0 ? (
+              <div className="text-center text-gray-text py-8">No industry data yet.</div>
+            ) : industryStats.map((ind) => (
+              <IndustryProgress 
+                key={ind.name}
+                name={ind.name} 
+                progress={Math.min(100, (ind.count / stats.sent) * 100)} 
+                rate={`${ind.count} leads`} 
+              />
+            ))}
           </div>
         </div>
 
         <div className="bg-surface p-6 rounded-xl border border-white/5">
           <h3 className="text-lg font-bold mb-6 text-white">Recent Activity</h3>
           <div className="space-y-4">
-            <ActivityItem 
-              title="HVAC Lead Opened Email" 
-              subtitle="Dallas, TX • 'Introduction to Boncks'" 
-              time="2m ago" 
-            />
-            <ActivityItem 
-              title="New Trial Signup" 
-              subtitle="Elite Plumbing • Austin, TX" 
-              time="15m ago" 
-              highlight 
-            />
-            <ActivityItem 
-              title="Link Clicked: Pricing" 
-              subtitle="Sparky's Electric • Houston, TX" 
-              time="45m ago" 
-            />
-            <ActivityItem 
-              title="Campaign Started" 
-              subtitle="'Texas Spring Outreach' • 500 leads" 
-              time="1h ago" 
-            />
+            {industryStats.length > 0 ? (
+              <ActivityItem 
+                title="Lead Collection Successful" 
+                subtitle={`${stats.sent} leads found in Phoenix, AZ`} 
+                time="Just now" 
+                highlight
+              />
+            ) : (
+              <div className="text-center text-gray-text py-8">No recent activity.</div>
+            )}
           </div>
         </div>
       </div>
