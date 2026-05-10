@@ -22,12 +22,14 @@ const StatCard = ({ label, value, change, icon: Icon }) => (
 
 export const Analytics = () => {
   const [stats, setStats] = useState({
+    leadsFound: 0,
     sent: 0,
     openRate: '0%',
     clickRate: '0%',
     conversions: 0
   })
   const [industryStats, setIndustryStats] = useState([])
+  const [recentActivity, setRecentActivity] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -37,7 +39,6 @@ export const Analytics = () => {
   }, [])
 
   const fetchStats = async () => {
-    setLoading(true)
     try {
       // Fetch lead counts by industry
       const { data: leads, error: leadsError } = await supabase
@@ -59,17 +60,19 @@ export const Analytics = () => {
 
       setIndustryStats(sortedIndustries)
 
-      // Fetch email logs for global stats
-      const { count: sentCount } = await supabase
-        .from('email_logs')
-        .select('*', { count: 'exact', head: true })
+      // Fetch campaign stats for global metrics
+      const { data: campaign } = await supabase
+        .from('campaigns')
+        .select('emails_sent, emails_opened, emails_clicked')
+        .eq('name', 'Daily Outreach - Phase 1')
+        .single()
 
-      const { count: openCount } = await supabase
-        .from('email_logs')
-        .select('*', { count: 'exact', head: true })
-        .eq('status', 'opened')
-
-      const openRate = logsSentCount > 0 ? ((openCount / logsSentCount) * 100).toFixed(1) + '%' : '0%'
+      const openRate = campaign && campaign.emails_sent > 0 
+        ? ((campaign.emails_opened / campaign.emails_sent) * 100).toFixed(1) + '%' 
+        : '0%'
+      const clickRate = campaign && campaign.emails_sent > 0 
+        ? ((campaign.emails_clicked / campaign.emails_sent) * 100).toFixed(1) + '%' 
+        : '0%'
 
       // Fetch emails sent count (leads with status 'contacted')
       const { count: contactedCount } = await supabase
@@ -77,13 +80,36 @@ export const Analytics = () => {
         .select('*', { count: 'exact', head: true })
         .eq('status', 'contacted')
 
+      // Fetch conversion count (trial signups)
+      const { count: conversionCount } = await supabase
+        .from('leads')
+        .select('*', { count: 'exact', head: true })
+        .or('boncks_trial_started.eq.true,status.eq.converted')
+
       setStats({
         leadsFound: leads.length,
-        sent: contactedCount || 0,
+        sent: contactedCount || campaign?.emails_sent || 0,
         openRate: openRate,
-        clickRate: '0%',
-        conversions: 0
+        clickRate: clickRate,
+        conversions: conversionCount || 0
       })
+
+      // Fetch recent activity
+      const { data: logs } = await supabase
+        .from('email_logs')
+        .select('*, leads(business_name)')
+        .order('created_at', { ascending: false })
+        .limit(5)
+
+      if (logs) {
+        setRecentActivity(logs.map(log => ({
+          title: `Email ${log.status.charAt(0).toUpperCase() + log.status.slice(1)}`,
+          subtitle: `Target: ${log.leads?.business_name || log.to_email}`,
+          time: new Date(log.created_at).toLocaleTimeString(),
+          highlight: log.status === 'opened' || log.status === 'clicked'
+        })))
+      }
+
     } catch (err) {
       console.error('Error fetching analytics:', err)
     } finally {
@@ -106,11 +132,12 @@ export const Analytics = () => {
         </button>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <StatCard label="Total Leads Found" value={stats.leadsFound} change={loading ? "..." : ""} icon={TrendingUp} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+        <StatCard label="Total Leads" value={stats.leadsFound} icon={TrendingUp} />
         <StatCard label="Emails Sent" value={stats.sent} change="Today" icon={Users} />
-        <StatCard label="Average Open Rate" value={stats.openRate} change="0%" icon={Users} />
-        <StatCard label="Trial Signups" value={stats.conversions} change="0%" icon={Zap} />
+        <StatCard label="Open Rate" value={stats.openRate} icon={Users} />
+        <StatCard label="Click Rate" value={stats.clickRate} icon={MousePointer2} />
+        <StatCard label="Trial Signups" value={stats.conversions} icon={Zap} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -123,7 +150,7 @@ export const Analytics = () => {
               <IndustryProgress 
                 key={ind.name}
                 name={ind.name} 
-                progress={Math.min(100, (ind.count / stats.sent) * 100)} 
+                progress={Math.min(100, (ind.count / (stats.leadsFound || 1)) * 100)} 
                 rate={`${ind.count} leads`} 
               />
             ))}
@@ -133,14 +160,15 @@ export const Analytics = () => {
         <div className="bg-surface p-6 rounded-xl border border-white/5">
           <h3 className="text-lg font-bold mb-6 text-white">Recent Activity</h3>
           <div className="space-y-4">
-            {industryStats.length > 0 ? (
+            {recentActivity.length > 0 ? recentActivity.map((activity, idx) => (
               <ActivityItem 
-                title="Lead Collection Successful" 
-                subtitle={`${stats.sent} leads found in Phoenix, AZ`} 
-                time="Just now" 
-                highlight
+                key={idx}
+                title={activity.title} 
+                subtitle={activity.subtitle} 
+                time={activity.time} 
+                highlight={activity.highlight}
               />
-            ) : (
+            )) : (
               <div className="text-center text-gray-text py-8">No recent activity.</div>
             )}
           </div>
