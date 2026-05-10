@@ -10,6 +10,8 @@ export const Leads = () => {
 
   useEffect(() => {
     fetchLeads()
+    const interval = setInterval(fetchLeads, 10000)
+    return () => clearInterval(interval)
   }, [])
 
   const fetchLeads = async () => {

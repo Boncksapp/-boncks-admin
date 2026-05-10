@@ -32,6 +32,8 @@ export const Analytics = () => {
 
   useEffect(() => {
     fetchStats()
+    const interval = setInterval(fetchStats, 10000)
+    return () => clearInterval(interval)
   }, [])
 
   const fetchStats = async () => {
@@ -67,10 +69,17 @@ export const Analytics = () => {
         .select('*', { count: 'exact', head: true })
         .eq('status', 'opened')
 
-      const openRate = sentCount > 0 ? ((openCount / sentCount) * 100).toFixed(1) + '%' : '0%'
+      const openRate = logsSentCount > 0 ? ((openCount / logsSentCount) * 100).toFixed(1) + '%' : '0%'
+
+      // Fetch emails sent count (leads with status 'contacted')
+      const { count: contactedCount } = await supabase
+        .from('leads')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'contacted')
 
       setStats({
-        sent: leads.length, // Showing total leads as "Leads Found"
+        leadsFound: leads.length,
+        sent: contactedCount || 0,
         openRate: openRate,
         clickRate: '0%',
         conversions: 0
@@ -98,9 +107,9 @@ export const Analytics = () => {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <StatCard label="Total Leads Found" value={stats.sent} change={loading ? "..." : ""} icon={TrendingUp} />
+        <StatCard label="Total Leads Found" value={stats.leadsFound} change={loading ? "..." : ""} icon={TrendingUp} />
+        <StatCard label="Emails Sent" value={stats.sent} change="Today" icon={Users} />
         <StatCard label="Average Open Rate" value={stats.openRate} change="0%" icon={Users} />
-        <StatCard label="Click-Through Rate" value={stats.clickRate} change="0%" icon={MousePointer2} />
         <StatCard label="Trial Signups" value={stats.conversions} change="0%" icon={Zap} />
       </div>
 

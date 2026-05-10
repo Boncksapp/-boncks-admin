@@ -3,6 +3,7 @@ import { Layout } from './components/Layout'
 import { Analytics } from './pages/Analytics'
 import { Leads } from './pages/Leads'
 import { Campaigns } from './pages/Campaigns'
+import { Templates } from './pages/Templates'
 
 function App() {
   const [activeTab, setActiveTab] = useState('analytics')
@@ -16,15 +17,7 @@ function App() {
       case 'campaigns':
         return <Campaigns />
       case 'templates':
-        return (
-          <div className="p-8">
-            <h1 className="text-3xl font-bold tracking-tight text-white">Email Templates</h1>
-            <p className="text-gray-text mt-1">Manage your professional email outreach templates.</p>
-            <div className="mt-8 bg-surface p-12 rounded-xl border border-white/5 text-center">
-              <p className="text-gray-text">Template management coming soon.</p>
-            </div>
-          </div>
-        )
+        return <Templates />
       case 'suppression':
         return (
           <div className="p-8">

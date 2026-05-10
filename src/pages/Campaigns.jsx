@@ -5,48 +5,35 @@ import { cn } from '../utils/cn'
 
 export const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Mock data
-    setCampaigns([
-      { 
-        id: '1', 
-        name: 'HVAC Texas Spring Outreach', 
-        status: 'active',
-        sent: 450,
-        opened: '22%',
-        clicked: '5%',
-        industry: 'HVAC',
-        daily_limit: 100,
-      },
-      { 
-        id: '2', 
-        name: 'Roofing Austin Initial', 
-        status: 'paused',
-        sent: 120,
-        opened: '18%',
-        clicked: '3%',
-        industry: 'Roofing',
-        daily_limit: 50,
-      },
-      { 
-        id: '3', 
-        name: 'Cleaning Services National', 
-        status: 'draft',
-        sent: 0,
-        opened: '0%',
-        clicked: '0%',
-        industry: 'Cleaning Services',
-        daily_limit: 200,
-      }
-    ])
+    fetchCampaigns()
+    const interval = setInterval(fetchCampaigns, 10000)
+    return () => clearInterval(interval)
   }, [])
+
+  const fetchCampaigns = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('campaigns')
+        .select('*')
+        .order('created_at', { ascending: false })
+
+      if (error) throw error
+      setCampaigns(data || [])
+    } catch (err) {
+      console.error('Error fetching campaigns:', err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="p-8">
       <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Campaigns</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-white">Campaigns</h1>
           <p className="text-gray-text mt-1">Manage and monitor your automated email outreach campaigns.</p>
         </div>
         <button className="flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition-colors">
@@ -55,83 +42,78 @@ export const Campaigns = () => {
         </button>
       </header>
 
-      <div className="grid grid-cols-1 gap-6">
-        {campaigns.map((campaign) => (
-          <div key={campaign.id} className="bg-surface rounded-xl border border-white/5 overflow-hidden group hover:border-primary/20 transition-all">
-            <div className="p-6">
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className={cn(
-                    "w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-white/5",
-                    campaign.status === 'active' ? "bg-green-500/10 text-green-500" :
-                    campaign.status === 'paused' ? "bg-yellow-500/10 text-yellow-500" :
-                    "bg-white/5 text-gray-text"
-                  )}>
-                    <Send size={24} />
+      {loading && campaigns.length === 0 ? (
+        <div className="p-12 text-center text-gray-text bg-surface rounded-xl border border-white/5">
+          Loading campaigns...
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-6">
+          {campaigns.length === 0 ? (
+            <div className="p-12 text-center text-gray-text bg-surface rounded-xl border border-white/5">
+              No campaigns found. Create your first campaign to start outreach.
+            </div>
+          ) : campaigns.map((campaign) => (
+            <div key={campaign.id} className="bg-surface rounded-xl border border-white/5 overflow-hidden group hover:border-primary/20 transition-all">
+              <div className="p-6">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+                  <div className="flex items-start gap-4">
+                    <div className={cn(
+                      "w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-white/5",
+                      campaign.status === 'active' ? "bg-green-500/10 text-green-500" :
+                      campaign.status === 'paused' ? "bg-yellow-500/10 text-yellow-500" :
+                      "bg-white/5 text-gray-text"
+                    )}>
+                      <Send size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">{campaign.name}</h3>
+                      <div className="flex items-center gap-3 mt-1 text-sm text-gray-text">
+                        <span className="flex items-center gap-1">
+                          <BarChart3 size={14} />
+                          {campaign.industry_name || 'All Industries'}
+                        </span>
+                        <span className="w-1 h-1 bg-white/10 rounded-full"></span>
+                        <span className="flex items-center gap-1">
+                          <Clock size={14} />
+                          Daily Limit: {campaign.daily_limit || 100}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">{campaign.name}</h3>
-                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-text">
-                      <span className="flex items-center gap-1">
-                        <BarChart3 size={14} />
-                        {campaign.industry}
-                      </span>
-                      <span className="w-1 h-1 bg-white/10 rounded-full"></span>
-                      <span className="flex items-center gap-1">
-                        <Clock size={14} />
-                        Daily Limit: {campaign.daily_limit}
-                      </span>
+                  <div className="flex items-center gap-3">
+                    <span className={cn(
+                      "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2",
+                      campaign.status === 'active' ? "bg-green-500/10 text-green-500 border border-green-500/20" :
+                      campaign.status === 'paused' ? "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20" :
+                      "bg-white/5 text-gray-text border border-white/10"
+                    )}>
+                      <div className={cn(
+                        "w-1.5 h-1.5 rounded-full animate-pulse",
+                        campaign.status === 'active' ? "bg-green-500" :
+                        campaign.status === 'paused' ? "bg-yellow-500" :
+                        "bg-gray-text"
+                      )}></div>
+                      {campaign.status}
+                    </span>
+                    <div className="flex bg-dark rounded-lg p-1 border border-white/5">
+                      <button className="p-1.5 hover:bg-white/5 rounded text-gray-text hover:text-white transition-colors">
+                        {campaign.status === 'active' ? <Pause size={18} /> : <Play size={18} />}
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className={cn(
-                    "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2",
-                    campaign.status === 'active' ? "bg-green-500/10 text-green-500 border border-green-500/20" :
-                    campaign.status === 'paused' ? "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20" :
-                    "bg-white/5 text-gray-text border border-white/10"
-                  )}>
-                    <div className={cn(
-                      "w-1.5 h-1.5 rounded-full animate-pulse",
-                      campaign.status === 'active' ? "bg-green-500" :
-                      campaign.status === 'paused' ? "bg-yellow-500" :
-                      "bg-gray-text"
-                    )}></div>
-                    {campaign.status}
-                  </span>
-                  <div className="flex bg-dark rounded-lg p-1 border border-white/5">
-                    <button className="p-1.5 hover:bg-white/5 rounded text-gray-text hover:text-white transition-colors">
-                      {campaign.status === 'active' ? <Pause size={18} /> : <Play size={18} />}
-                    </button>
-                    <button className="p-1.5 hover:bg-white/5 rounded text-gray-text hover:text-white transition-colors">
-                      <BarChart3 size={18} />
-                    </button>
-                  </div>
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <Metric label="Emails Sent" value={campaign.sent} />
-                <Metric label="Open Rate" value={campaign.opened} />
-                <Metric label="Click Rate" value={campaign.clicked} />
-                <Metric label="Unsubscribes" value="2" color="red" />
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <Metric label="Emails Sent" value={campaign.emails_sent || 0} />
+                  <Metric label="Open Rate" value={campaign.emails_sent > 0 ? ((campaign.emails_opened / campaign.emails_sent) * 100).toFixed(1) + '%' : '0%'} />
+                  <Metric label="Click Rate" value={campaign.emails_sent > 0 ? ((campaign.emails_clicked / campaign.emails_sent) * 100).toFixed(1) + '%' : '0%'} />
+                  <Metric label="Unsubscribes" value={campaign.unsubscribes || 0} color="red" />
+                </div>
               </div>
             </div>
-            
-            {campaign.status === 'active' && (
-              <div className="bg-white/5 px-6 py-3 flex items-center justify-between text-xs">
-                <div className="flex items-center gap-2 text-green-500 font-medium">
-                  <AlertCircle size={14} />
-                  <span>Next batch scheduled in 45 minutes</span>
-                </div>
-                <div className="text-gray-text">
-                  Progress: <span className="text-white">45%</span>
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
