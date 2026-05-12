@@ -18,6 +18,7 @@ export const Campaigns = () => {
       const { data, error } = await supabase
         .from('campaigns')
         .select('*')
+        .not('name', 'ilike', '[SYSTEM_SIGNAL]%')
         .order('created_at', { ascending: false })
 
       if (error) throw error

@@ -40,11 +40,21 @@ export const Analytics = () => {
 
   const fetchStats = async () => {
     try {
-      // Fetch lead counts by industry
+      // Fetch total count explicitly to avoid 1000 row limit
+      const { count: totalLeads, error: countError } = await supabase
+        .from('leads')
+        .select('*', { count: 'exact', head: true })
+        .neq('business_name', 'Success Verification')
+
+      if (countError) throw countError
+
+      // Fetch lead counts by industry (we still need the data for the progress bars)
+      // We'll fetch more than 1000 just in case
       const { data: leads, error: leadsError } = await supabase
         .from('leads')
         .select('industry_name')
         .neq('business_name', 'Success Verification')
+        .limit(10000)
 
       if (leadsError) throw leadsError
 
@@ -61,17 +71,23 @@ export const Analytics = () => {
       setIndustryStats(sortedIndustries)
 
       // Fetch campaign stats for global metrics
-      const { data: campaign } = await supabase
+      const { data: campaignData } = await supabase
         .from('campaigns')
         .select('emails_sent, emails_opened, emails_clicked')
-        .eq('name', 'Daily Outreach - Phase 1')
-        .single()
+        .not('name', 'ilike', '[SYSTEM_SIGNAL]%')
 
-      const openRate = campaign && campaign.emails_sent > 0 
-        ? ((campaign.emails_opened / campaign.emails_sent) * 100).toFixed(1) + '%' 
+      const totals = (campaignData || []).reduce((acc, c) => {
+        acc.sent += c.emails_sent || 0
+        acc.opened += c.emails_opened || 0
+        acc.clicked += c.emails_clicked || 0
+        return acc
+      }, { sent: 0, opened: 0, clicked: 0 })
+
+      const openRate = totals.sent > 0 
+        ? ((totals.opened / totals.sent) * 100).toFixed(1) + '%' 
         : '0%'
-      const clickRate = campaign && campaign.emails_sent > 0 
-        ? ((campaign.emails_clicked / campaign.emails_sent) * 100).toFixed(1) + '%' 
+      const clickRate = totals.sent > 0 
+        ? ((totals.clicked / totals.sent) * 100).toFixed(1) + '%' 
         : '0%'
 
       // Fetch emails sent count (leads with status 'contacted')
@@ -87,8 +103,8 @@ export const Analytics = () => {
         .or('boncks_trial_started.eq.true,status.eq.converted')
 
       setStats({
-        leadsFound: leads.length,
-        sent: contactedCount || campaign?.emails_sent || 0,
+        leadsFound: totalLeads ?? leads.length ?? 0,
+        sent: contactedCount || totals.sent || 0,
         openRate: openRate,
         clickRate: clickRate,
         conversions: conversionCount || 0
@@ -117,24 +133,69 @@ export const Analytics = () => {
     }
   }
 
+  const wakeUpSystem = async () => {
+    try {
+      const now = new Date().toISOString()
+      const { data: existing } = await supabase
+        .from('process_heartbeats')
+        .select('id')
+        .eq('process_name', 'boncks-wake-command')
+        .maybeSingle()
+
+      if (existing) {
+        await supabase
+          .from('process_heartbeats')
+          .update({ status: 'pending', last_heartbeat: now })
+          .eq('id', existing.id)
+      } else {
+        await supabase
+          .from('process_heartbeats')
+          .insert({ process_name: 'boncks-wake-command', status: 'pending', last_heartbeat: now })
+      }
+      
+      alert('Wake up signal sent! All systems (Leads & Emails) will restart in ~30 seconds.')
+    } catch (err) {
+      console.error('Error waking up system:', err)
+      alert('Failed to send wake up signal.')
+    }
+  }
+
   return (
     <div className="p-8">
       <header className="mb-8 flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard Overview</h1>
-          <p className="text-gray-text mt-1">Real-time performance across all service industries.</p>
+          <h1 className="text-3xl font-bold tracking-tight text-primary">Live Stats Overview</h1>
+          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.2)</p>
         </div>
-        <button 
-          onClick={fetchStats}
-          className="bg-dark text-white border border-white/10 px-4 py-2 rounded-lg font-bold hover:bg-white/5 transition-colors"
-        >
-          Refresh
-        </button>
+        <div className="flex gap-3">
+          <button 
+            onClick={wakeUpSystem}
+            className="bg-primary text-dark px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-[0_0_15px_rgba(249,168,37,0.3)] flex items-center gap-2"
+          >
+            <Zap size={16} />
+            Wake Up System
+          </button>
+          <button 
+            onClick={fetchStats}
+            className="bg-dark text-white border border-white/10 px-4 py-2 rounded-lg font-bold hover:bg-white/5 transition-colors"
+          >
+            Refresh
+          </button>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-        <StatCard label="Total Leads" value={stats.leadsFound} icon={TrendingUp} />
-        <StatCard label="Emails Sent" value={stats.sent} change="Today" icon={Users} />
+        <div className="bg-surface p-6 rounded-xl border border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.1)]">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+              <TrendingUp size={20} />
+            </div>
+            <span className="text-primary text-[10px] font-bold uppercase tracking-tighter animate-pulse">Live</span>
+          </div>
+          <div className="text-gray-text text-sm mb-1">Total Verified Leads</div>
+          <div className="text-3xl font-bold tracking-tight text-white">{stats.leadsFound}</div>
+        </div>
+        <StatCard label="Emails Sent" value={stats.sent} change="Total" icon={Users} />
         <StatCard label="Open Rate" value={stats.openRate} icon={Users} />
         <StatCard label="Click Rate" value={stats.clickRate} icon={MousePointer2} />
         <StatCard label="Trial Signups" value={stats.conversions} icon={Zap} />

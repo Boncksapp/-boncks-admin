@@ -57,6 +57,9 @@ export const Sidebar = ({ activeTab, setActiveTab }) => {
       </nav>
 
       <div className="p-4 border-t border-white/10">
+        <div className="text-[10px] text-gray-text/50 mb-4 px-2 uppercase tracking-widest font-bold">
+          System: v2.1.0-LIVE
+        </div>
         <div className="flex items-center gap-3 p-2">
           <div className="w-8 h-8 rounded-full bg-surface border border-white/10 flex items-center justify-center text-xs text-white">AD</div>
           <div className="flex-1 min-w-0">

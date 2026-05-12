@@ -7,30 +7,65 @@ export const Leads = () => {
   const [leads, setLeads] = useState([])
   const [loading, setLoading] = useState(true)
   const [totalCount, setTotalCount] = useState(0)
-
-  useEffect(() => {
-    fetchLeads()
-    const interval = setInterval(fetchLeads, 10000)
-    return () => clearInterval(interval)
-  }, [])
+  const [searchTerm, setSearchTerm] = useState('')
+  const [industryFilter, setIndustryFilter] = useState('All Industries')
 
   const fetchLeads = async () => {
-    setLoading(true)
     try {
-      const { data, count, error } = await supabase
+      setLoading(true)
+      let query = supabase
         .from('leads')
         .select('*', { count: 'exact' })
         .neq('business_name', 'Success Verification')
+
+      if (searchTerm) {
+        query = query.or(`business_name.ilike.%${searchTerm}%,business_email.ilike.%${searchTerm}%,city.ilike.%${searchTerm}%`)
+      }
+
+      if (industryFilter !== 'All Industries') {
+        query = query.eq('industry_name', industryFilter)
+      }
+
+      const { data, count, error } = await query
         .order('created_at', { ascending: false })
         .limit(50)
 
-      if (error) throw error
-      setLeads(data || [])
-      setTotalCount(count || 0)
+      if (error) {
+        console.error('Supabase Error:', error)
+      } else {
+        setLeads(data || [])
+        setTotalCount(count || 0)
+      }
     } catch (err) {
       console.error('Error fetching leads:', err)
     } finally {
       setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchLeads()
+    const interval = setInterval(() => {
+      fetchLeads()
+    }, 10000)
+    return () => clearInterval(interval)
+  }, [searchTerm, industryFilter])
+
+  const sendSignal = async (signalName) => {
+    try {
+      const { error } = await supabase
+        .from('campaigns')
+        .insert({
+          organization_id: '00000000-0000-0000-0000-000000000001',
+          name: `[SYSTEM_SIGNAL]${signalName}`,
+          status: 'draft'
+        })
+      
+      if (error) throw error
+      alert(`Signal ${signalName} sent to collector!`)
+    } catch (err) {
+      console.error('Error sending signal:', err)
+      alert('Failed to send signal.')
     }
   }
 
@@ -39,14 +74,26 @@ export const Leads = () => {
       <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Lead Management</h1>
-          <p className="text-gray-text mt-1">Search, filter and organize your collected business leads.</p>
+          <p className="text-gray-text mt-1">Search, filter and organize your collected business leads. ({totalCount} total)</p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
+          <button 
+            onClick={() => sendSignal('RESTART')}
+            className="bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 px-4 py-2 rounded-lg font-bold hover:bg-yellow-500/20 transition-colors"
+          >
+            Restart Collector
+          </button>
+          <button 
+            onClick={() => sendSignal('CLEANUP')}
+            className="bg-red-500/10 text-red-500 border border-red-500/20 px-4 py-2 rounded-lg font-bold hover:bg-red-500/20 transition-colors"
+          >
+            Clean Duplicates
+          </button>
           <button 
             onClick={fetchLeads}
             className="bg-dark text-white border border-white/10 px-4 py-2 rounded-lg font-bold hover:bg-white/5 transition-colors"
           >
-            Refresh
+            Refresh List
           </button>
           <button className="bg-primary text-black px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition-colors">
             Import Leads
@@ -61,19 +108,30 @@ export const Leads = () => {
             <input 
               type="text" 
               placeholder="Search leads by name, email or city..." 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-dark border border-white/10 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-primary/50 text-white"
             />
           </div>
           <div className="flex gap-2">
-            <button className="flex items-center gap-2 bg-dark border border-white/10 rounded-lg px-4 py-2 text-sm text-white hover:bg-white/5">
-              <Filter size={16} />
-              <span>Filters</span>
-            </button>
-            <select className="bg-dark border border-white/10 rounded-lg px-4 py-2 text-sm text-white hover:bg-white/5 focus:outline-none">
+            <select 
+              value={industryFilter}
+              onChange={(e) => setIndustryFilter(e.target.value)}
+              className="bg-dark border border-white/10 rounded-lg px-4 py-2 text-sm text-white hover:bg-white/5 focus:outline-none"
+            >
               <option>All Industries</option>
               <option>HVAC</option>
               <option>Plumbing</option>
               <option>Roofing</option>
+              <option>Cleaning</option>
+              <option>Electrical</option>
+              <option>Landscaping</option>
+              <option>Pest Control</option>
+              <option>Mobile Mechanics</option>
+              <option>Trucking</option>
+              <option>Appliance Repair</option>
+              <option>Painting</option>
+              <option>Security Services</option>
             </select>
           </div>
         </div>
