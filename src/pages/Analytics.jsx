@@ -72,7 +72,10 @@ export const Analytics = () => {
       }
 
       const industryCounts = allLeads.reduce((acc, lead) => {
-        const name = lead.industry_name || 'Uncategorized'
+        let name = lead.industry_name ? lead.industry_name.trim() : 'Uncategorized'
+        // Simple normalization: "Cleaning" and "Cleaning Services" map to "Cleaning"
+        if (name === 'Cleaning Services') name = 'Cleaning'
+        
         acc[name] = (acc[name] || 0) + 1
         return acc
       }, {})
@@ -178,7 +181,7 @@ export const Analytics = () => {
       <header className="mb-8 flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-primary">Live Stats Overview</h1>
-          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.3)</p>
+          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.4)</p>
         </div>
         <div className="flex gap-3">
           <button 
