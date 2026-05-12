@@ -48,17 +48,30 @@ export const Analytics = () => {
 
       if (countError) throw countError
 
-      // Fetch lead counts by industry (we still need the data for the progress bars)
-      // We'll fetch more than 1000 just in case
-      const { data: leads, error: leadsError } = await supabase
-        .from('leads')
-        .select('industry_name')
-        .neq('business_name', 'Success Verification')
-        .limit(10000)
+      // Fetch lead counts by industry in batches to bypass 1000 row limit
+      let allLeads = []
+      let page = 0
+      const pageSize = 1000
+      let hasMore = true
 
-      if (leadsError) throw leadsError
+      while (hasMore && page < 20) { // Limit to 20k leads for performance
+        const { data: pageData, error: pageError } = await supabase
+          .from('leads')
+          .select('industry_name')
+          .neq('business_name', 'Success Verification')
+          .range(page * pageSize, (page + 1) * pageSize - 1)
 
-      const industryCounts = leads.reduce((acc, lead) => {
+        if (pageError) throw pageError
+        if (!pageData || pageData.length === 0) {
+          hasMore = false
+        } else {
+          allLeads = [...allLeads, ...pageData]
+          hasMore = pageData.length === pageSize
+          page++
+        }
+      }
+
+      const industryCounts = allLeads.reduce((acc, lead) => {
         const name = lead.industry_name || 'Uncategorized'
         acc[name] = (acc[name] || 0) + 1
         return acc
@@ -165,7 +178,7 @@ export const Analytics = () => {
       <header className="mb-8 flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-primary">Live Stats Overview</h1>
-          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.2)</p>
+          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.3)</p>
         </div>
         <div className="flex gap-3">
           <button 
