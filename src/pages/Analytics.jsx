@@ -30,13 +30,33 @@ export const Analytics = () => {
   })
   const [industryStats, setIndustryStats] = useState([])
   const [recentActivity, setRecentActivity] = useState([])
+  const [processStatus, setProcessStatus] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     fetchStats()
-    const interval = setInterval(fetchStats, 10000)
+    fetchProcessStatus()
+    const interval = setInterval(() => {
+      fetchStats()
+      fetchProcessStatus()
+    }, 10000)
     return () => clearInterval(interval)
   }, [])
+
+  const fetchProcessStatus = async () => {
+    try {
+      const { data } = await supabase
+        .from('process_heartbeats')
+        .select('*')
+        .order('process_name')
+      
+      if (data) {
+        setProcessStatus(data.filter(p => p.process_name !== 'boncks-wake-command'))
+      }
+    } catch (err) {
+      console.error('Error fetching process status:', err)
+    }
+  }
 
   const fetchStats = async () => {
     try {
@@ -169,7 +189,7 @@ export const Analytics = () => {
           .insert({ process_name: 'boncks-wake-command', status: 'pending', last_heartbeat: now })
       }
       
-      alert('Wake up signal sent! All systems (Leads & Emails) will restart in ~30 seconds.')
+      alert('WAKE COMMAND SENT! All system processes are being force-restarted. You will see the heartbeats below reset in ~10-30 seconds.')
     } catch (err) {
       console.error('Error waking up system:', err)
       alert('Failed to send wake up signal.')
@@ -181,7 +201,7 @@ export const Analytics = () => {
       <header className="mb-8 flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-primary">Live Stats Overview</h1>
-          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.4)</p>
+          <p className="text-gray-text mt-1">Real-time performance across all service industries. (v2.1.5)</p>
         </div>
         <div className="flex gap-3">
           <button 
@@ -219,18 +239,36 @@ export const Analytics = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-surface p-6 rounded-xl border border-white/5">
-          <h3 className="text-lg font-bold mb-6 text-white">Leads by Industry</h3>
-          <div className="space-y-6">
-            {industryStats.length === 0 ? (
-              <div className="text-center text-gray-text py-8">No industry data yet.</div>
-            ) : industryStats.map((ind) => (
-              <IndustryProgress 
-                key={ind.name}
-                name={ind.name} 
-                progress={Math.min(100, (ind.count / (stats.leadsFound || 1)) * 100)} 
-                rate={`${ind.count} leads`} 
-              />
-            ))}
+          <h3 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
+            <Zap size={18} className="text-primary" />
+            System Process Monitor
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {processStatus.length === 0 ? (
+              <div className="col-span-2 text-center text-gray-text py-4">No process data.</div>
+            ) : processStatus.map((proc) => {
+              const isAlive = proc.status === 'alive'
+              const lastHb = new Date(proc.last_heartbeat)
+              const diffSec = Math.floor((new Date() - lastHb) / 1000)
+              const isStalled = diffSec > 120
+              
+              return (
+                <div key={proc.process_name} className="bg-dark/50 p-4 rounded-lg border border-white/5">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-sm font-bold text-white">{proc.process_name.replace('boncks-', '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>
+                    <span className={cn(
+                      "text-[10px] px-2 py-0.5 rounded-full font-bold uppercase",
+                      isAlive && !isStalled ? "bg-green-500/10 text-green-500" : "bg-red-500/10 text-red-500"
+                    )}>
+                      {isAlive && !isStalled ? 'Running' : 'Stalled'}
+                    </span>
+                  </div>
+                  <div className="text-[10px] text-gray-text">
+                    Last active: {diffSec < 0 ? 0 : diffSec}s ago
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
 
@@ -248,6 +286,24 @@ export const Analytics = () => {
             )) : (
               <div className="text-center text-gray-text py-8">No recent activity.</div>
             )}
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <div className="bg-surface p-6 rounded-xl border border-white/5">
+          <h3 className="text-lg font-bold mb-6 text-white">Leads by Industry</h3>
+          <div className="space-y-6">
+            {industryStats.length === 0 ? (
+              <div className="text-center text-gray-text py-8">No industry data yet.</div>
+            ) : industryStats.map((ind) => (
+              <IndustryProgress 
+                key={ind.name}
+                name={ind.name} 
+                progress={Math.min(100, (ind.count / (stats.leadsFound || 1)) * 100)} 
+                rate={`${ind.count} leads`} 
+              />
+            ))}
           </div>
         </div>
       </div>
