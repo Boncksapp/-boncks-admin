@@ -1,0 +1,1040 @@
+nohup: ignoring input
+
+> admin-dashboard@0.0.0 dev
+> vite --host 0.0.0.0
+
+
+  VITE v5.4.21  ready in 351 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://169.254.0.21:3000/
+7:07:44 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx: Identifier 'RefreshCw' has already been declared. (327:6)
+
+  325 | )
+  326 |
+> 327 | const RefreshCw = ({ size, className }) => (
+      |       ^
+  328 |   <svg 
+  329 |     xmlns="http://www.w3.org/2000/svg" 
+  330 |     width={size} 
+7:07:44 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx: Identifier 'RefreshCw' has already been declared. (327:6)
+
+  325 | )
+  326 |
+> 327 | const RefreshCw = ({ size, className }) => (
+      |       ^
+  328 |   <svg 
+  329 |     xmlns="http://www.w3.org/2000/svg" 
+  330 |     width={size} 
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx:327:6
+  325|  )
+  326|  
+  327|  const RefreshCw = ({ size, className }) => (
+     |        ^
+  328|    <svg 
+  329|      xmlns="http://www.w3.org/2000/svg" 
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at ScopeHandler.checkRedeclarationInScope (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1619:19)
+      at ScopeHandler.declareName (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1585:12)
+      at JSXParserMixin.declareNameFromIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7584:16)
+      at JSXParserMixin.checkIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7580:12)
+      at JSXParserMixin.checkLVal (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7517:12)
+      at JSXParserMixin.parseVarId (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13429:10)
+      at JSXParserMixin.parseVar (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13400:12)
+      at JSXParserMixin.parseVarStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13247:10)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12868:23)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseModuleItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12761:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:36)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseProgram (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12639:10)
+      at JSXParserMixin.parseTopLevel (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12629:25)
+      at JSXParserMixin.parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14505:25)
+      at parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14539:38)
+      at parser (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:261:32)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:189:28
+      at /home/team/shared/admin-dashboard/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:113:33
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:287:14)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+7:07:45 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx: Identifier 'RefreshCw' has already been declared. (327:6)
+
+  325 | )
+  326 |
+> 327 | const RefreshCw = ({ size, className }) => (
+      |       ^
+  328 |   <svg 
+  329 |     xmlns="http://www.w3.org/2000/svg" 
+  330 |     width={size} 
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx:327:6
+  325|  )
+  326|  
+  327|  const RefreshCw = ({ size, className }) => (
+     |        ^
+  328|    <svg 
+  329|      xmlns="http://www.w3.org/2000/svg" 
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at ScopeHandler.checkRedeclarationInScope (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1619:19)
+      at ScopeHandler.declareName (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1585:12)
+      at JSXParserMixin.declareNameFromIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7584:16)
+      at JSXParserMixin.checkIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7580:12)
+      at JSXParserMixin.checkLVal (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7517:12)
+      at JSXParserMixin.parseVarId (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13429:10)
+      at JSXParserMixin.parseVar (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13400:12)
+      at JSXParserMixin.parseVarStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13247:10)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12868:23)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseModuleItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12761:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:36)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseProgram (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12639:10)
+      at JSXParserMixin.parseTopLevel (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12629:25)
+      at JSXParserMixin.parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14505:25)
+      at parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14539:38)
+      at parser (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:261:32)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:189:28
+      at /home/team/shared/admin-dashboard/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:113:33
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:287:14)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+7:07:48 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx: Identifier 'RefreshCw' has already been declared. (327:6)
+
+  325 | )
+  326 |
+> 327 | const RefreshCw = ({ size, className }) => (
+      |       ^
+  328 |   <svg 
+  329 |     xmlns="http://www.w3.org/2000/svg" 
+  330 |     width={size} 
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Analytics.jsx:327:6
+  325|  )
+  326|  
+  327|  const RefreshCw = ({ size, className }) => (
+     |        ^
+  328|    <svg 
+  329|      xmlns="http://www.w3.org/2000/svg" 
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at ScopeHandler.checkRedeclarationInScope (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1619:19)
+      at ScopeHandler.declareName (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:1585:12)
+      at JSXParserMixin.declareNameFromIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7584:16)
+      at JSXParserMixin.checkIdentifier (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7580:12)
+      at JSXParserMixin.checkLVal (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:7517:12)
+      at JSXParserMixin.parseVarId (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13429:10)
+      at JSXParserMixin.parseVar (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13400:12)
+      at JSXParserMixin.parseVarStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13247:10)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12868:23)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseModuleItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12761:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:36)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseProgram (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12639:10)
+      at JSXParserMixin.parseTopLevel (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12629:25)
+      at JSXParserMixin.parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14505:25)
+      at parse (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:14539:38)
+      at parser (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/team/shared/admin-dashboard/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:261:32)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:189:28
+      at /home/team/shared/admin-dashboard/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:113:33
+      at step (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:287:14)
+      at /home/team/shared/admin-dashboard/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/team/shared/admin-dashboard/node_modules/gensync/index.js:223:11)
+5:58:50 PM [vite] hmr update /src/pages/Suppression.jsx, /src/index.css
+5:59:18 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:59:28 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:59:42 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+6:00:18 PM [vite] hmr update /src/pages/Leads.jsx, /src/index.css
+6:00:18 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Unexpected token, expected "," (189:24)
+
+  187 |                         "bg-white/10 text-gray-text"
+  188 |
+> 189 |                         {lead.status}
+      |                         ^
+  190 |                       </span>
+  191 |                     </td>
+  192 |                     <td className="px-6 py-4">
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Leads.jsx:189:24
+  187|                          "bg-white/10 text-gray-text"
+  188|  
+  189|                          {lead.status}
+     |                          ^
+  190|                        </span>
+  191|                      </td>
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.parseCallExpressionArguments (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11260:14)
+      at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11203:29)
+      at JSXParserMixin.parseSubscript (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11137:19)
+      at JSXParserMixin.parseSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11111:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11102:17)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4644:31)
+      at JSXParserMixin.jsxParseAttributeValue (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4616:21)
+      at JSXParserMixin.jsxParseAttribute (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4665:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4679:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4674:17)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4698:33)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+6:00:18 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Unexpected token, expected "," (189:24)
+
+  187 |                         "bg-white/10 text-gray-text"
+  188 |
+> 189 |                         {lead.status}
+      |                         ^
+  190 |                       </span>
+  191 |                     </td>
+  192 |                     <td className="px-6 py-4">
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Leads.jsx:189:24
+  187|                          "bg-white/10 text-gray-text"
+  188|  
+  189|                          {lead.status}
+     |                          ^
+  190|                        </span>
+  191|                      </td>
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.parseCallExpressionArguments (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11260:14)
+      at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11203:29)
+      at JSXParserMixin.parseSubscript (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11137:19)
+      at JSXParserMixin.parseSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11111:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11102:17)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4644:31)
+      at JSXParserMixin.jsxParseAttributeValue (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4616:21)
+      at JSXParserMixin.jsxParseAttribute (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4665:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4679:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4674:17)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4698:33)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+5:41:30 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:41:30 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+      |                                                                             ^
+  312 |   <div className={cn(
+  313 |     "p-6 rounded-xl border transition-all",
+  314 |     active ? "bg-primary/5 border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.05)]" : "bg-surface border-white/5"
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+     |                                                                              ^
+  312|    <div className={cn(
+  313|      "p-6 rounded-xl border transition-all",
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:41:30 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+      |                                                                             ^
+  312 |   <div className={cn(
+  313 |     "p-6 rounded-xl border transition-all",
+  314 |     active ? "bg-primary/5 border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.05)]" : "bg-surface border-white/5"
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+     |                                                                              ^
+  312|    <div className={cn(
+  313|      "p-6 rounded-xl border transition-all",
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:47:25 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Unexpected token, expected "," (189:24)
+
+  187 |                         "bg-white/10 text-gray-text"
+  188 |
+> 189 |                         {lead.status}
+      |                         ^
+  190 |                       </span>
+  191 |                     </td>
+  192 |                     <td className="px-6 py-4">
+5:47:25 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+      |                                                                             ^
+  312 |   <div className={cn(
+  313 |     "p-6 rounded-xl border transition-all",
+  314 |     active ? "bg-primary/5 border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.05)]" : "bg-surface border-white/5"
+5:54:49 PM [vite] hmr update /src/pages/Leads.jsx, /src/index.css
+5:54:55 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:54:55 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+      |                                                                             ^
+  312 |   <div className={cn(
+  313 |     "p-6 rounded-xl border transition-all",
+  314 |     active ? "bg-primary/5 border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.05)]" : "bg-surface border-white/5"
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+     |                                                                              ^
+  312|    <div className={cn(
+  313|      "p-6 rounded-xl border transition-all",
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:54:55 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+      |                                                                             ^
+  312 |   <div className={cn(
+  313 |     "p-6 rounded-xl border transition-all",
+  314 |     active ? "bg-primary/5 border-primary/20 shadow-[0_0_15px_rgba(249,168,37,0.05)]" : "bg-surface border-white/5"
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => (
+     |                                                                              ^
+  312|    <div className={cn(
+  313|      "p-6 rounded-xl border transition-all",
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:55:05 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:55:05 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+      |                                                                             ^
+  312 |   return (
+  313 |     <div className={cn(
+  314 |       "p-6 rounded-xl border transition-all",
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+     |                                                                              ^
+  312|    return (
+  313|      <div className={cn(
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:55:05 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+      |                                                                             ^
+  312 |   return (
+  313 |     <div className={cn(
+  314 |       "p-6 rounded-xl border transition-all",
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:311:76
+  309|  }
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+     |                                                                              ^
+  312|    return (
+  313|      <div className={cn(
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.expect (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6916:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4649:10)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+      at JSXParserMixin.parseBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13326:10)
+      at JSXParserMixin.parseBlock (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13314:10)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12117:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+5:55:32 PM [vite] hmr update /src/App.jsx, /src/index.css
+5:55:32 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Expected corresponding JSX closing tag for <td>. (206:22)
+
+  204 |                         </div>
+  205 |                         <span className="text-xs font-bold text-white/60">{lead.quality_score}</span>
+> 206 |                       </div>
+      |                       ^
+  207 |                     </td>
+  208 |                     <td className="px-6 py-4 text-right">
+  209 |                       <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Leads.jsx:206:22
+  204|                          </div>
+  205|                          <span className="text-xs font-bold text-white/60">{lead.quality_score}</span>
+  206|                        </div>
+     |                        ^
+  207|                      </td>
+  208|                      <td className="px-6 py-4 text-right">
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4739:16)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseExprListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12192:18)
+      at JSXParserMixin.parseCallExpressionArguments (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11269:22)
+      at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11203:29)
+      at JSXParserMixin.parseSubscript (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11137:19)
+      at JSXParserMixin.parseSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11111:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11102:17)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+5:55:32 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Expected corresponding JSX closing tag for <td>. (206:22)
+
+  204 |                         </div>
+  205 |                         <span className="text-xs font-bold text-white/60">{lead.quality_score}</span>
+> 206 |                       </div>
+      |                       ^
+  207 |                     </td>
+  208 |                     <td className="px-6 py-4 text-right">
+  209 |                       <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+5:55:32 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+      |                                                                             ^
+  312 |   return (
+  313 |     <div className={cn(
+  314 |       "p-6 rounded-xl border transition-all",
+5:55:32 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/Leads.jsx: Expected corresponding JSX closing tag for <td>. (206:22)
+
+  204 |                         </div>
+  205 |                         <span className="text-xs font-bold text-white/60">{lead.quality_score}</span>
+> 206 |                       </div>
+      |                       ^
+  207 |                     </td>
+  208 |                     <td className="px-6 py-4 text-right">
+  209 |                       <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/Leads.jsx:206:22
+  204|                          </div>
+  205|                          <span className="text-xs font-bold text-white/60">{lead.quality_score}</span>
+  206|                        </div>
+     |                        ^
+  207|                      </td>
+  208|                      <td className="px-6 py-4 text-right">
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4739:16)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4710:32)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseFunctionBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12092:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11704:12)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseExprListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12192:18)
+      at JSXParserMixin.parseCallExpressionArguments (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11269:22)
+      at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11203:29)
+      at JSXParserMixin.parseSubscript (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11137:19)
+      at JSXParserMixin.parseSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11111:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11102:17)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+5:56:26 PM [vite] hmr update /src/App.jsx, /src/index.css
+5:56:26 PM [vite] Pre-transform error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token, expected "}" (311:76)
+
+  309 | }
+  310 |
+> 311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon: Icon, pauseIcon: PauseIcon, triggerLabel, children }) => {
+      |                                                                             ^
+  312 |   return (
+  313 |     <div className={cn(
+  314 |       "p-6 rounded-xl border transition-all",
+5:56:57 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+5:56:57 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token (312:2)
+
+  310 |
+  311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon, pauseIcon, triggerLabel, children }) => {
+> 312 |   const Icon = icon
+      |   ^
+  313 |   const PauseIcon = pauseIcon
+  314 |   return (
+  315 |     <div className={cn(
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:312:2
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon, pauseIcon, triggerLabel, children }) => {
+  312|    const Icon = icon
+     |    ^
+  313|    const PauseIcon = pauseIcon
+  314|    return (
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11459:22)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4644:31)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+5:56:57 PM [vite] Internal server error: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx: Unexpected token (312:2)
+
+  310 |
+  311 | const ControlCard = ({ title, description, active, onToggle, onTrigger, icon, pauseIcon, triggerLabel, children }) => {
+> 312 |   const Icon = icon
+      |   ^
+  313 |   const PauseIcon = pauseIcon
+  314 |   return (
+  315 |     <div className={cn(
+  Plugin: vite:react-babel
+  File: /home/team/shared/admin-dashboard/src/pages/SystemStatus.jsx:312:2
+  310|  
+  311|  const ControlCard = ({ title, description, active, onToggle, onTrigger, icon, pauseIcon, triggerLabel, children }) => {
+  312|    const Icon = icon
+     |    ^
+  313|    const PauseIcon = pauseIcon
+  314|    return (
+      at constructor (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:365:19)
+      at JSXParserMixin.raise (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6616:19)
+      at JSXParserMixin.unexpected (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:6636:16)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11459:22)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4644:31)
+      at JSXParserMixin.jsxParseElementAt (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4723:36)
+      at JSXParserMixin.jsxParseElement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4761:17)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4771:19)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12443:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10817:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12510:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11692:28)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11348:23)
+      at JSXParserMixin.parseExprAtom (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:4776:20)
+      at JSXParserMixin.parseExprSubscripts (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11098:23)
+      at JSXParserMixin.parseUpdate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11083:21)
+      at JSXParserMixin.parseMaybeUnary (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:11063:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10916:61)
+      at JSXParserMixin.parseExprOps (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10921:23)
+      at JSXParserMixin.parseMaybeConditional (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10898:23)
+      at JSXParserMixin.parseMaybeAssign (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10848:21)
+      at JSXParserMixin.parseExpressionBase (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:39
+      at JSXParserMixin.allowInAnd (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12438:16)
+      at JSXParserMixin.parseExpression (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:10797:17)
+      at JSXParserMixin.parseReturnStatement (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13159:28)
+      at JSXParserMixin.parseStatementContent (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12815:21)
+      at JSXParserMixin.parseStatementLike (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12784:17)
+      at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
+5:57:27 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
