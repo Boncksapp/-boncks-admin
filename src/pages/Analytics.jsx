@@ -161,7 +161,7 @@ export const Analytics = () => {
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-primary">Platform Analytics</h1>
           <div className="flex items-center gap-2 mt-1">
-            <p className="text-gray-text">ROI and Conversion performance tracking. (v2.2.0)</p>
+            <p className="text-gray-text">ROI and Conversion performance tracking. (v3.0.0-PRO)</p>
             <span className="w-1 h-1 bg-white/10 rounded-full"></span>
             <p className="text-[10px] text-primary/60 font-mono uppercase tracking-widest animate-pulse">Live Data Stream</p>
           </div>

@@ -1038,3 +1038,5 @@ nohup: ignoring input
       at JSXParserMixin.parseStatementListItem (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:12764:17)
       at JSXParserMixin.parseBlockOrModuleBlockBody (/home/team/shared/admin-dashboard/node_modules/@babel/parser/lib/index.js:13333:61)
 5:57:27 PM [vite] hmr update /src/pages/SystemStatus.jsx, /src/index.css
+6:37:42 PM [vite] hmr update /src/pages/Analytics.jsx, /src/index.css
+6:37:42 PM [vite] hmr update /src/components/Sidebar.jsx, /src/index.css
